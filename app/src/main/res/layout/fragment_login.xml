@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_profile"
+    tools:context=".ui.home.HomeFragment">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_info"
+                android:layout_width="350dp"
+                android:layout_height="250dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="150dp"
+                app:cardCornerRadius="10dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/card_avatar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:cardCornerRadius="90dp">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:background="@drawable/ic_baseline_person_24" />
+
+                    </android.support.v7.widget.CardView>
+
+                    <TextView
+                        android:id="@+id/ten_avatar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Khách"
+                        android:textSize="25dp"
+                        android:textStyle="bold"
+                        android:textColor="#040707"
+                        app:layout_constraintTop_toBottomOf="@id/card_avatar"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"/>
+
+                    <TextView
+                        android:id="@+id/email_avatar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="nguyenducquan0201@gmail.com"
+                        app:layout_constraintTop_toBottomOf="@id/ten_avatar"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        />
+
+                    <Button
+                        android:id="@+id/bt_email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="30dp"
+                        android:background="#DA030A"
+                        android:text="Email"
+                        android:textColor="#FFFFFF"
+                        app:layout_constraintTop_toBottomOf="@id/email_avatar"
+                        app:layout_constraintRight_toLeftOf="@id/bt_face"
+                        app:layout_constraintLeft_toLeftOf="parent"/>
+                    <Button
+                        android:id="@+id/bt_face"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:background="#0384DA"
+                        android:text="facebook"
+                        android:textColor="#FFFFFF"
+                        app:layout_constraintTop_toTopOf="@id/bt_email"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintLeft_toRightOf="@id/bt_email" />
+                </android.support.constraint.ConstraintLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/thongke"
+                android:layout_width="350dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="20dp"
+                app:cardCornerRadius="10dp"
+                app:layout_constraintRight_toRightOf="@id/card_info"
+                app:layout_constraintLeft_toLeftOf="@id/card_info"
+                app:layout_constraintTop_toBottomOf="@id/card_info">
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/data_luotdoc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="428"
+                        android:textSize="30dp"
+                        android:textStyle="bold"
+                        android:textColor="#050505"
+                        app:layout_constraintBottom_toTopOf="@id/t_luotdoc"
+                        app:layout_constraintRight_toRightOf="@id/t_luotdoc"
+                        app:layout_constraintLeft_toLeftOf="@id/t_luotdoc"/>
+                    <TextView
+                        android:id="@+id/t_luotdoc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Lượt đọc"
+                        android:textSize="20dp"
+                        android:textColor="#050505"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginLeft="30dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        />
+
+                    <TextView
+                        android:id="@+id/data_luotxem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="100"
+                        android:textSize="30dp"
+                        android:textStyle="bold"
+                        android:textColor="#050505"
+                        app:layout_constraintBottom_toTopOf="@id/t_luotxem"
+                        app:layout_constraintRight_toRightOf="@id/t_luotxem"
+                        app:layout_constraintLeft_toLeftOf="@id/t_luotxem"/>
+                    <TextView
+                        android:id="@+id/t_luotxem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Đăng nhập"
+                        android:textSize="20dp"
+                        android:textColor="#050505"
+                        android:layout_marginBottom="20dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        />
+
+                    <TextView
+                        android:id="@+id/data_luotlike"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="42"
+                        android:textSize="30dp"
+                        android:textStyle="bold"
+                        android:textColor="#050505"
+                        app:layout_constraintBottom_toTopOf="@id/t_luotlike"
+                        app:layout_constraintRight_toRightOf="@id/t_luotlike"
+                        app:layout_constraintLeft_toLeftOf="@id/t_luotlike"/>
+                    <TextView
+                        android:id="@+id/t_luotlike"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Lượt like"
+                        android:textSize="20dp"
+                        android:textColor="#050505"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginRight="30dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        />
+                </android.support.constraint.ConstraintLayout>
+            </android.support.v7.widget.CardView>
+
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+    <TextView
+        android:id="@+id/text_profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</FrameLayout>
